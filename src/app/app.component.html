@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="terrainJeu" #terrainJeu>
+      <div *ngIf="countDown >= 0" id="countDown">
+        {{ countDown }}
+      </div>
+      <div
+        class="invader"
+        (keypress)="keyEvent($event)"
+        #invader1
+        [ngStyle]="{ top: top + 'px', left: left + 'px' }"
+      ></div>
+    </div>
+  </body>
+</html>

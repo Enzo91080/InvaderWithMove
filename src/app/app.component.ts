@@ -47,8 +47,7 @@ export class AppComponent implements OnInit {
   // Décompte
   initialCountDown = 5;
   countDown!: number;
-  left = 100;
-  right = 100;
+  action = 100;
 
   opened: number;
 
@@ -75,13 +74,13 @@ export class AppComponent implements OnInit {
         tap((key) => {
           switch (key) {
             case 'ArrowLeft':
-              this.left -= this.horizontalMoveOffset;
+              this.action -= this.horizontalMoveOffset;
               break;
             case 'ArrowRight':
-              this.left += this.horizontalMoveOffset;
+              this.action += this.horizontalMoveOffset;
               break;
           }
-          console.log(this.left);
+          console.log(this.action);
         })
       )
       .subscribe();
